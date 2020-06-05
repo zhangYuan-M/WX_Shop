@@ -1,0 +1,79 @@
+<view class="profile">
+  <!-- 上部分图片盒子 -->
+  <view class="img-box" wx:if="{{userInfo.userInfo}}">
+    <image src="{{userInfo.userInfo.avatarUrl}}" mode="scaleToFill" />
+  </view>
+  <!-- 头像区域 -->
+  <view class="avatar" wx:if="{{userInfo.userInfo}}">
+    <image src="{{userInfo.userInfo.avatarUrl}}" mode="scaleToFill" />
+    <view class="user-name">{{userInfo.userInfo.nickName}}</view>
+  </view>
+  <!-- 按钮区域 -->
+  <view class="btn" wx:if="{{!userInfo.userInfo}}">
+    <button plain="{{true}}" type="primary">
+      <navigator url="/pages/login/index">登录</navigator>
+    </button>
+  </view>
+  <!-- 内容区域 -->
+  <view class="user-content">
+    <view class="main">
+      <view class="part1">
+        <navigator class="part1-item">
+          <text class="num">0</text>
+          <text>收藏的店铺</text>
+        </navigator>
+        <navigator class="part1-item" url="/pages/collect/index">
+          <text class="num">{{col_num}}</text>
+          <text>收藏的商品</text>
+        </navigator>
+        <navigator class="part1-item">
+          <text class="num">0</text>
+          <text>关注的商品</text>
+        </navigator>
+        <navigator class="part1-item">
+          <text class="num">0</text>
+          <text>历史足迹</text>
+        </navigator>
+      </view>
+      <view class="part2">
+        <view class="title">我的订单</view>
+        <view class="part2-box">
+          <navigator class="part2-item" url="/pages/order/index?type=1">
+            <text class="iconfont icon-dingdan"></text>
+            <text>全部订单</text>
+          </navigator>
+          <navigator class="part2-item" url="/pages/order/index?type=2">
+            <text class="iconfont icon-dingdan"></text>
+            <text>待付款</text>
+          </navigator>
+          <navigator class="part2-item" url="/pages/order/index?type=3">
+            <text class="iconfont icon-dingdan"></text>
+            <text>待收货</text>
+          </navigator>
+          <navigator class="part2-item">
+            <text class="iconfont icon-kefu"></text>
+            <text>退货/退款</text>
+          </navigator>
+        </view>
+      </view>
+      <view class="part3">
+        <view class="address">我的收货地址</view>
+      </view>
+      <view class="part4">
+        <view class="part4-item">
+          <view class="part4-item1">
+            <view class="name">联系客服</view>
+            <view class="phone">403-234-234-2233</view>
+          </view>
+          <view class="part4-item">常见问题</view>
+          <navigator url="/pages/feedback/index" class="part4-item">意见反馈</navigator>
+          <view class="part4-item">分享好友</view>
+          <view class="part4-item">我的评价</view>
+          <view class="part4-item">火车票</view>
+          <view class="part4-item">天天领现金</view>
+          <view class="part4-item">设置</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

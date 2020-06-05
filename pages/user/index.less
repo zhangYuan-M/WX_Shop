@@ -1,0 +1,132 @@
+/* pages/user/index.wxss */
+.profile {
+	position: relative;
+	height: 100%;
+	background-color: #eee;
+
+	.img-box {
+		height: 33vh;
+		overflow: hidden;
+		-webkit-filter: brightness(0.93); //兼容不同浏览器
+		-o-filter: brightness(0.93);
+		-moz-filter: brightness(0.93);
+		filter: brightness(0.93); //设置亮度值，范围：0-1
+		image {
+			height: 39vh;
+			width: 110%;
+			// c3新特性 滤镜
+			filter: blur(16rpx);
+		}
+	}
+	.avatar {
+		position: absolute;
+		left: 50%;
+		top: 10%;
+		width: 170rpx;
+		height: 170rpx;
+		transform: translate(-50%, -50%);
+		image {
+			width: 170rpx;
+			height: 170rpx;
+			border: 1px solid rgb(170, 170, 170);
+			box-shadow: 2rpx 2rpx 17rpx rgb(179, 179, 179);
+
+			border-radius: 50%;
+		}
+		.user-name {
+			text-align: center;
+			color: white;
+			font-weight: 600;
+			font-size: 34rpx;
+		}
+	}
+	.btn {
+		background-color: var(--themeColor);
+		height: 33vh;
+		width: 100%;
+		padding-top: 140rpx;
+	}
+	.user-content {
+		position: relative;
+		height: 100vh;
+		.main {
+			position: absolute;
+			width: 90%;
+			top: 47vh;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 20rpx 10rpx;
+			.part1 {
+				display: flex;
+				padding: 20rpx 14rpx;
+				border-radius: 10rpx;
+				background-color: white;
+				// padding-bottom: 20rpx;
+				.part1-item {
+					text-align: center;
+					flex: 1;
+					display: flex;
+					flex-direction: column;
+					color: rgb(71, 71, 71);
+					.num {
+						color: var(--themeColor);
+					}
+				}
+			}
+			.part2 {
+				border-radius: 10rpx;
+				margin-top: 30rpx;
+				background-color: white;
+
+				.title {
+					border-radius: 10rpx;
+					height: 90rpx;
+					line-height: 90rpx;
+					padding: 0 20rpx;
+					border-bottom: 1px solid rgba(216, 216, 216, 0.884);
+				}
+				.part2-box {
+					display: flex;
+					padding: 20rpx 10rpx;
+					.part2-item {
+						flex: 1;
+						display: flex;
+						align-items: center;
+						flex-direction: column;
+						justify-content: center;
+						.iconfont {
+							color: var(--themeColor);
+							font-size: 44rpx;
+						}
+					}
+				}
+			}
+			.part3 {
+				border-radius: 10rpx;
+				margin: 30rpx 0;
+				padding: 20rpx;
+				background-color: white;
+			}
+			.part4 {
+				border-radius: 10rpx;
+				margin: 30rpx 0;
+				padding: 20rpx;
+				background-color: white;
+				.part4-item {
+					line-height: 80rpx;
+					padding: 10rpx;
+					font-size: 34rpx;
+
+					border-bottom: 1px solid #eee;
+					background-color: white;
+				}
+				.part4-item1 {
+					border-bottom: 1px solid #eee;
+					display: flex;
+					justify-content: space-between;
+					padding: 0 14rpx;
+				}
+			}
+		}
+	}
+}

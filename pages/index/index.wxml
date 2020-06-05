@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="index-page">
+  <!-- 搜索框 -->
+  <SearchInput></SearchInput>
+  <!-- 轮播图 -->
+  <!-- 
+    siwper存在默认样式：高度150px 宽度100%
+    image存在默认样式：高度240px 宽度320px
+  -->
+  <swiper indicator-dots indicator-color autoplay interval="5000" circular>
+    <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+      <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+        <image src="{{item.image_src}}" mode="widthFix" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <!-- 导航分类 -->
+  <view class="nav-list">
+    <navigator wx:for="{{navList}}" url="/pages/category/index" open-type="switchTab" wx:key="name">
+      <image class src="{{item.image_src}}" mode="widthFix" />
+    </navigator>
+  </view>
+  <!-- 楼层数据 -->
+  <view class="floor-list">
+    <view
+      class="floor-group"
+      wx:for="{{floorList}}"
+      wx:for-item="floorItem"
+      wx:key="floor_title.name"
+    >
+      <!-- 每一层数据 -->
+      <view class="floor-title">
+        <image src="{{floorItem.floor_title.image_src}}" mode="widthFix" />
+      </view>
+      <view class="floor-content">
+        <navigator
+          url="/pages/goods_list/index?cid=5"
+          open-type="redirect"
+          wx:for="{{floorItem.product_list}}"
+          wx:key="name"
+        >
+          <image src="{{item.image_src}}" mode="{{index === 0 ?'widthFix':'scaleToFill'}}" />
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

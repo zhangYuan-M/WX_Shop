@@ -1,0 +1,103 @@
+/* pages/goods_detail/index.wxss */
+.detail {
+  padding-bottom: 130rpx;
+}
+.detail swiper {
+  height: 65vw;
+  text-align: center;
+}
+.detail swiper swiper-item image {
+  width: 65%;
+}
+.detail .good_price {
+  color: var(--themeColor);
+  font-style: 32rpx;
+  font-weight: bold;
+  padding: 15rpx;
+}
+.detail .goods_info {
+  border-bottom: 10rpx solid #eee;
+  border-top: 10rpx solid #eee;
+  padding: 15rpx;
+  display: flex;
+}
+.detail .goods_info .good_name {
+  flex: 5;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.detail .goods_info .good_collect {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+}
+.detail .goods_info .good_collect .iconfont {
+  font-size: 40rpx;
+}
+.detail .goods_info .good_collect .icon_name {
+  color: grey;
+}
+.detail .goods_info .good_collect .active {
+  color: #e64e4e;
+}
+.detail .good_img .good_title {
+  color: var(--themeColor);
+  font-size: 48rpx;
+  font-weight: bold;
+  border-bottom: 30rpx solid #eee;
+  padding: 15rpx;
+}
+.detail .bottom_bar {
+  border-top: 1px solid #dddddd;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 130rpx;
+  background-color: white;
+}
+.detail .bottom_bar :nth-child(4) {
+  height: 130rpx;
+  background-color: rgba(255, 174, 0, 0.877);
+}
+.detail .bottom_bar :nth-child(5) {
+  height: 130rpx;
+  background-color: red;
+}
+.detail .bottom_bar .bottom_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+.detail .bottom_bar .bottom_item button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.detail .bottom_bar .buy_item {
+  flex: 2;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail .bottom_bar .iconfont {
+  font-size: 44rpx;
+}

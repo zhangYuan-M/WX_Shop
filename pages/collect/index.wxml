@@ -1,0 +1,31 @@
+<view class="cart-page">
+  <SearchInput></SearchInput>
+  <!-- 购物车内容区域 -->
+  <view class="cart-content" wx:for="{{cart}}" wx:key="*this" wx:if="{{cart.length}}">
+    <view class="cart-item">
+      <!-- 复选框 -->
+      <view class="check">
+        <checkbox-group bindchange="checkChange" data-id="{{item.goods_id}}">
+          <checkbox checked="{{item.goods_id}}"></checkbox>
+        </checkbox-group>
+      </view>
+      <!-- 商品图片 -->
+      <view class="img" bind:tap="shopClick" data-id="{{item.goods_id}}">
+        <image src="{{item.pics[0].pics_sma}}" mode="widthFix" />
+      </view>
+      <view class="shop-info" bind:tap="shopClick" data-id="{{item.goods_id}}">
+        <view class="goods_name">{{item.goods_name}}</view>
+        <view class="tool">
+          <view class="goods_price">$ {{item.goods_price}}.00</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 购物车为空的提示图片 -->
+  <view class="cart-empoty" wx:if="{{!cart.length}}">
+    <image
+      src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591179690207&di=feafce1ffa6e44b5edc8845ec99e294c&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"
+      mode="widthFix"
+    />
+  </view>
+</view>

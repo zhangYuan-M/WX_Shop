@@ -1,0 +1,55 @@
+<view class="cart-page">
+  <!-- 添加收货地址按钮 -->
+  <view class="address">
+    <view class="address-show">
+      <view class="avator-box">
+        <view class="avator">{{addressInfo.userName}}</view>
+        <view class="avator">{{addressInfo.telNumber}}</view>
+      </view>
+      <view class="detail">
+        {{addressInfo.provinceName +addressInfo.cityName
+        +addressInfo.countyName+addressInfo.detailInfo}}
+      </view>
+    </view>
+  </view>
+  <!-- 支付内容区域 -->
+  <view class="cart-content" wx:for="{{cart}}" wx:key="*this" wx:if="{{cart.length}}">
+    <view class="cart-item">
+      <!-- 商品图片 -->
+      <view class="img">
+        <image src="{{item.goods_small_logo}}" mode="widthFix" />
+      </view>
+      <view class="shop-info">
+        <view class="goods_name">{{item.goods_name}}</view>
+        <view class="tool">
+          <view class="goods_price">$ {{item.goods_price}}.00</view>
+          <view class="num_edt">
+            <view
+              class="add_num"
+              bind:tap="changeNum"
+              data-num="{{1}}"
+              data-id="{{item.goods_id}}"
+            >+</view>
+            <view class="goods_num">{{item.goods_number}}</view>
+            <view
+              class="even_num"
+              bind:tap="changeNum"
+              data-num="{{-1}}"
+              data-id="{{item.goods_id}}"
+            >-</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部工具栏 -->
+  <view class="bottom-bar">
+    <view class="center-part">
+      合计 ￥
+      <text class="price">{{totalPrice}}</text>
+      <view class="promise">退货包运费</view>
+    </view>
+    <view class="right-part" bind:tap="handlePay">结算({{totalNumber}})</view>
+  </view>
+</view>

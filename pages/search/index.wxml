@@ -1,0 +1,14 @@
+<view class="search">
+  <view class="part1">
+    <input type="text" placeholder="请输入您要搜索的" bindinput="inputChange" />
+    <view class="{{isShowCancle? 'text':'hidden'}}" bind:tap="cancleClick">{{errCode}}</view>
+    <button bind:tap="cancleClick">取消</button>
+  </view>
+  <view class="content">
+    <navigator
+      url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+      class="item"
+      wx:for="{{data}}"
+    >{{item.goods_name}}</navigator>
+  </view>
+</view>

@@ -1,0 +1,126 @@
+/* pages/user/index.wxss */
+.profile {
+  position: relative;
+  height: 100%;
+  background-color: #eee;
+}
+.profile .img-box {
+  height: 33vh;
+  overflow: hidden;
+  -webkit-filter: brightness(0.93);
+  -o-filter: brightness(0.93);
+  -moz-filter: brightness(0.93);
+  filter: brightness(0.93);
+}
+.profile .img-box image {
+  height: 39vh;
+  width: 110%;
+  filter: blur(16rpx);
+}
+.profile .avatar {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 170rpx;
+  height: 170rpx;
+  transform: translate(-50%, -50%);
+}
+.profile .avatar image {
+  width: 170rpx;
+  height: 170rpx;
+  border: 1px solid #aaaaaa;
+  box-shadow: 2rpx 2rpx 17rpx #b3b3b3;
+  border-radius: 50%;
+}
+.profile .avatar .user-name {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 34rpx;
+}
+.profile .btn {
+  background-color: var(--themeColor);
+  height: 33vh;
+  width: 100%;
+  padding-top: 140rpx;
+}
+.profile .user-content {
+  position: relative;
+  height: 100vh;
+}
+.profile .user-content .main {
+  position: absolute;
+  width: 90%;
+  top: 47vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20rpx 10rpx;
+}
+.profile .user-content .main .part1 {
+  display: flex;
+  padding: 20rpx 14rpx;
+  border-radius: 10rpx;
+  background-color: white;
+}
+.profile .user-content .main .part1 .part1-item {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #474747;
+}
+.profile .user-content .main .part1 .part1-item .num {
+  color: var(--themeColor);
+}
+.profile .user-content .main .part2 {
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  background-color: white;
+}
+.profile .user-content .main .part2 .title {
+  border-radius: 10rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 20rpx;
+  border-bottom: 1px solid rgba(216, 216, 216, 0.884);
+}
+.profile .user-content .main .part2 .part2-box {
+  display: flex;
+  padding: 20rpx 10rpx;
+}
+.profile .user-content .main .part2 .part2-box .part2-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile .user-content .main .part2 .part2-box .part2-item .iconfont {
+  color: var(--themeColor);
+  font-size: 44rpx;
+}
+.profile .user-content .main .part3 {
+  border-radius: 10rpx;
+  margin: 30rpx 0;
+  padding: 20rpx;
+  background-color: white;
+}
+.profile .user-content .main .part4 {
+  border-radius: 10rpx;
+  margin: 30rpx 0;
+  padding: 20rpx;
+  background-color: white;
+}
+.profile .user-content .main .part4 .part4-item {
+  line-height: 80rpx;
+  padding: 10rpx;
+  font-size: 34rpx;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+}
+.profile .user-content .main .part4 .part4-item1 {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 14rpx;
+}

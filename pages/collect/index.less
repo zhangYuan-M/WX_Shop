@@ -1,0 +1,157 @@
+.cart-page {
+	// height: 100vh;
+	padding-bottom: 100rpx;
+
+	.address {
+		padding: 12rpx;
+
+		button {
+			width: 60%;
+		}
+
+		.address-show {
+			padding: 32rpx;
+			box-shadow: 5rpx 4rpx 34rpx gainsboro;
+			background-color: #eee;
+
+			.avator-box {
+				display: flex;
+				margin-bottom: 14rpx;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+	}
+
+	.cart-content {
+		.cart-item {
+			padding: 0 20rpx;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			border-bottom: 1px solid #eee;
+
+			.check {
+				flex: 1;
+
+				checkbox-group {
+					checkbox {
+					}
+				}
+			}
+
+			.img {
+				flex: 3;
+
+				image {
+					border: 1px solid rgba(216, 216, 216, 0.664);
+					width: 80%;
+				}
+			}
+
+			.shop-info {
+				flex: 4;
+
+				.goods_name {
+					display: -webkit-box;
+					overflow: hidden;
+					margin-bottom: 20rpx;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 2;
+				}
+
+				.tool {
+					display: flex;
+					align-items: center;
+					justify-content: space-around;
+
+					.goods_price {
+						color: var(--themeColor);
+						font-size: 32rpx;
+					}
+
+					.num_edt {
+						display: flex;
+						align-items: center;
+						justify-content: space-around;
+
+						.add_num {
+							background-color: #eee;
+							padding: 10rpx;
+						}
+
+						.goods_num {
+							color: rgb(75, 75, 75);
+							font-size: 32rpx;
+							margin: 0 15rpx;
+						}
+
+						.even_num {
+							background-color: #eee;
+							padding: 10rpx;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.cart-empoty {
+		width: 70%;
+		margin: 40rpx auto;
+	}
+
+	.bottom-bar {
+		background-color: #fff;
+		position: fixed;
+		border-top: 1px solid #eeeeee;
+		height: 90rpx;
+		bottom: 0px;
+		width: 100vw;
+
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		.left-part {
+			flex: 1;
+			display: flex;
+			justify-content: space-around;
+			text-align: center;
+
+			checkbox-group {
+				checkbox {
+				}
+			}
+
+			.text {
+				color: rgb(129, 129, 129);
+			}
+		}
+
+		.center-part {
+			text-align: center;
+			flex: 3;
+
+			text.price {
+				font-size: 39rpx;
+			}
+
+			.promise {
+				color: gray;
+				font-size: 26rpx;
+			}
+		}
+
+		.right-part {
+			background-color: var(--themeColor);
+			text-align: center;
+			height: 90rpx;
+			line-height: 90rpx;
+			color: white;
+			flex: 2;
+			font-weight: 600;
+			font-size: 34rpx;
+		}
+	}
+}

@@ -1,0 +1,34 @@
+<view class="feeback">
+  <Tabs tabs="{{tabs}}"></Tabs>
+  <view class="content">
+    <view class="part1">问题的种类</view>
+    <view class="part2">
+      <view class="item">功能建议</view>
+      <view class="item">产品建议</view>
+      <view class="item">界面建议</view>
+      <view class="item">数据建议</view>
+    </view>
+    <view class="part3">
+      <textarea
+        placeholder="请描述一下您的问题"
+        placeholder-class="textarea-placeholder"
+        maxlength="140"
+        auto-focus="true"
+        bind:input="handleInput"
+      ></textarea>
+      <view class="fb_tool">
+        <button bindtap="btnClick">+</button>
+        <UpImg
+          wx:for="{{imgArr}}"
+          wx:key="*this"
+          src="{{item}}"
+          bind:tap="imgClick"
+          data-index="{{index}}"
+        ></UpImg>
+      </view>
+    </view>
+    <view class="part4">
+      <button bindtap="formSubmitBtn">提交</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,81 @@
+<view class="cart-page">
+  <!-- 搜索框区域 -->
+  <SearchInput></SearchInput>
+  <!-- 添加收货地址按钮 -->
+  <view class="address">
+    <button
+      type="primary"
+      plain="{{true}}"
+      bind:tap="btnClick"
+      wx:if="{{!addressInfo.userName}}"
+    >+ 收货地址</button>
+    <view class="address-show" wx:else>
+      <view class="avator-box">
+        <view class="avator">{{addressInfo.userName}}</view>
+        <view class="avator">{{addressInfo.telNumber}}</view>
+      </view>
+      <view class="detail">
+        {{addressInfo.provinceName +addressInfo.cityName
+        +addressInfo.countyName+addressInfo.detailInfo}}
+      </view>
+    </view>
+  </view>
+  <!-- 购物车内容区域 -->
+  <view class="cart-content" wx:for="{{cart}}" wx:key="*this" wx:if="{{cart.length}}">
+    <view class="cart-item">
+      <!-- 复选框 -->
+      <view class="check">
+        <checkbox-group bindchange="checkChange" data-id="{{item.goods_id}}">
+          <checkbox checked="{{item.isChecked}}"></checkbox>
+        </checkbox-group>
+      </view>
+      <!-- 商品图片 -->
+      <view class="img">
+        <image src="{{item.goods_small_logo}}" mode="widthFix" />
+      </view>
+      <view class="shop-info">
+        <view class="goods_name">{{item.goods_name}}</view>
+        <view class="tool">
+          <view class="goods_price">$ {{item.goods_price}}.00</view>
+          <view class="num_edt">
+            <view
+              class="add_num"
+              bind:tap="changeNum"
+              data-num="{{1}}"
+              data-id="{{item.goods_id}}"
+            >+</view>
+            <view class="goods_num">{{item.goods_number}}</view>
+            <view
+              class="even_num"
+              bind:tap="changeNum"
+              data-num="{{-1}}"
+              data-id="{{item.goods_id}}"
+            >-</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 购物车为空的提示图片 -->
+  <view class="cart-empoty" wx:if="{{!cart.length}}">
+    <image
+      src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591179690207&di=feafce1ffa6e44b5edc8845ec99e294c&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"
+      mode="widthFix"
+    />
+  </view>
+  <!-- 底部工具栏 -->
+  <view class="bottom-bar">
+    <view class="left-part">
+      <checkbox-group bindchange="allCheckChange">
+        <checkbox checked="{{isCheckeAll}}"></checkbox>
+      </checkbox-group>
+      <view class="text">全选</view>
+    </view>
+    <view class="center-part">
+      合计 ￥
+      <text class="price">{{totalPrice}}</text>
+      <view class="promise">退货包运费</view>
+    </view>
+    <view class="right-part" bind:tap="handlePay">结算({{totalNumber}})</view>
+  </view>
+</view>

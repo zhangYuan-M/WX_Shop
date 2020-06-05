@@ -1,0 +1,47 @@
+<view class="order">
+  <Tabs tabs="{{tabs}}" bind:itemClick="itemClick"></Tabs>
+  <view class="content" wx:if="{{index === 0}}">
+    <view class="item-box">
+      <view class="item">
+        <view class="part1">订单编号</view>
+        <view class="part11">7343422323423</view>
+      </view>
+      <view class="item">
+        <view class="part2">订单价格</view>
+        <view class="part3">￥999.00</view>
+      </view>
+      <view class="item">
+        <view class="part4">订单日期</view>
+        <view class="part5">2020 09 01</view>
+      </view>
+    </view>
+    <view class="item-box">
+      <view class="item">
+        <view class="part1">订单编号</view>
+        <view class="part11">7343422323423</view>
+      </view>
+      <view class="item">
+        <view class="part2">订单价格</view>
+        <view class="part3">￥999.00</view>
+      </view>
+      <view class="item">
+        <view class="part4">订单日期</view>
+        <view class="part5">2020 09 01</view>
+      </view>
+    </view>
+    <view class="item-box">
+      <view class="item">
+        <view class="part1">订单编号</view>
+        <view class="part11">7343422323423</view>
+      </view>
+      <view class="item">
+        <view class="part2">订单价格</view>
+        <view class="part3">￥999.00</view>
+      </view>
+      <view class="item">
+        <view class="part4">订单日期</view>
+        <view class="part5">2020 09 01</view>
+      </view>
+    </view>
+  </view>
+</view>

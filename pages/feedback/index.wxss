@@ -1,0 +1,53 @@
+/* pages/feedback/index.wxss */
+.content {
+  background-color: #eee;
+  height: 100vh;
+  padding: 20rpx 33rpx;
+}
+.content .part1 {
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0rpx 33rpx;
+  background-color: white;
+  margin-bottom: 20rpx;
+}
+.content .part2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content .part2 .item {
+  width: 30.33%;
+  padding: 25rpx;
+  border-radius: 10rpx;
+  margin: 10rpx;
+  text-align: center;
+  background-color: #fff;
+}
+.content .part3 {
+  height: 35vh;
+  padding: 20rpx;
+  background-color: #fff;
+}
+.content .part3 .fb_tool {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content .part3 .fb_tool button {
+  font-size: 64rpx;
+  color: #5e5b5b;
+  padding: 0;
+  width: 90rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-bottom: 20rpx;
+}
+.content .part3 .fb_tool UpImg {
+  margin-left: 30rpx;
+}
+.content .part4 {
+  margin-top: 80rpx;
+  transform: translateX(23%);
+}

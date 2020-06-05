@@ -1,0 +1,47 @@
+/**index.wxss**/
+/* color: var(--themeColor); */
+.index-page swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+.index-page swiper swiper-item image {
+  width: 100%;
+}
+.index-page .nav-list {
+  display: flex;
+}
+.index-page .nav-list navigator {
+  padding: 21rpx;
+  flex: 1;
+}
+.index-page .nav-list navigator image {
+  width: 100%;
+}
+.index-page .floor-list .floor-group .floor_title {
+  padding: 14rpx 0;
+}
+.index-page .floor-list .floor-group .floor_title image {
+  width: 100%;
+}
+.index-page .floor-list .floor-group .floor-content {
+  overflow: hidden;
+}
+.index-page .floor-list .floor-group .floor-content navigator {
+  float: left;
+  width: 33.33%;
+  /* 后四个超链接 */
+  /* 2 3 两个超链接 */
+}
+.index-page .floor-list .floor-group .floor-content navigator:nth-last-child(-n + 4) {
+  /* 原图的宽高 232 *386 */
+  height: 27.72711207vw;
+  border-left: 10rpx solid #fff;
+}
+.index-page .floor-list .floor-group .floor-content navigator:nth-child(2),
+.index-page .floor-list .floor-group .floor-content navigator:nth-child(3) {
+  border-bottom: 10rpx solid #fff;
+}
+.index-page .floor-list .floor-group .floor-content navigator image {
+  width: 100%;
+  height: 100%;
+}

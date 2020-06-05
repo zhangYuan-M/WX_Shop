@@ -1,0 +1,17 @@
+/* components/Tabs/Tabs.wxss */
+.tabs {
+  display: flex;
+  width: 100%;
+  border-bottom: 1rpx solid gainsboro;
+}
+.tabs .tabs-item {
+  text-align: center;
+  font-size: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  flex: 1;
+}
+.tabs .active {
+  color: var(--themeColor);
+  border-bottom: 1rpx solid var(--themeColor);
+}

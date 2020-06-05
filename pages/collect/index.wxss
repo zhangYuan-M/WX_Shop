@@ -1,0 +1,119 @@
+.cart-page {
+  padding-bottom: 100rpx;
+}
+.cart-page .address {
+  padding: 12rpx;
+}
+.cart-page .address button {
+  width: 60%;
+}
+.cart-page .address .address-show {
+  padding: 32rpx;
+  box-shadow: 5rpx 4rpx 34rpx gainsboro;
+  background-color: #eee;
+}
+.cart-page .address .address-show .avator-box {
+  display: flex;
+  margin-bottom: 14rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-page .cart-content .cart-item {
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #eee;
+}
+.cart-page .cart-content .cart-item .check {
+  flex: 1;
+}
+.cart-page .cart-content .cart-item .img {
+  flex: 3;
+}
+.cart-page .cart-content .cart-item .img image {
+  border: 1px solid rgba(216, 216, 216, 0.664);
+  width: 80%;
+}
+.cart-page .cart-content .cart-item .shop-info {
+  flex: 4;
+}
+.cart-page .cart-content .cart-item .shop-info .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.cart-page .cart-content .cart-item .shop-info .tool {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cart-page .cart-content .cart-item .shop-info .tool .goods_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
+.cart-page .cart-content .cart-item .shop-info .tool .num_edt {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cart-page .cart-content .cart-item .shop-info .tool .num_edt .add_num {
+  background-color: #eee;
+  padding: 10rpx;
+}
+.cart-page .cart-content .cart-item .shop-info .tool .num_edt .goods_num {
+  color: #4b4b4b;
+  font-size: 32rpx;
+  margin: 0 15rpx;
+}
+.cart-page .cart-content .cart-item .shop-info .tool .num_edt .even_num {
+  background-color: #eee;
+  padding: 10rpx;
+}
+.cart-page .cart-empoty {
+  width: 70%;
+  margin: 40rpx auto;
+}
+.cart-page .bottom-bar {
+  background-color: #fff;
+  position: fixed;
+  border-top: 1px solid #eeeeee;
+  height: 90rpx;
+  bottom: 0px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cart-page .bottom-bar .left-part {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.cart-page .bottom-bar .left-part .text {
+  color: #818181;
+}
+.cart-page .bottom-bar .center-part {
+  text-align: center;
+  flex: 3;
+}
+.cart-page .bottom-bar .center-part text.price {
+  font-size: 39rpx;
+}
+.cart-page .bottom-bar .center-part .promise {
+  color: gray;
+  font-size: 26rpx;
+}
+.cart-page .bottom-bar .right-part {
+  background-color: var(--themeColor);
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: white;
+  flex: 2;
+  font-weight: 600;
+  font-size: 34rpx;
+}
